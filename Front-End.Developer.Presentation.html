@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Developer Presentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Front-End Developer Presentation</h1>
+        <div class="content" id="presentationContent">
+            <p>Hi everyone! My name is Samer, and I'm excited to share my passion for front-end development with you.</p>
+            <p>I am a certified front-end developer with credentials from Meta, IBM, and Google. With these prestigious certifications, I have gained extensive knowledge and expertise in the field.</p>
+            <p>Over the past two years, I have been teaching HTML, CSS, and Bootstrap. My teaching journey has allowed me to help many students master the art of web development and create stunning websites.</p>
+            <p>One of my proudest achievements is the development of an innovative system for teaching and practicing programming. This system is designed to make learning interactive, engaging, and efficient, ensuring that you can quickly apply what you learn to real-world projects.</p>
+            <p>Feel free to check out my GitHub profile to see some of the projects and systems I've worked on. This will give you a glimpse of my skills and the kind of work I can help you achieve.</p>
+            <p>If you're eager to learn how to create amazing websites and want to dive into the world of front-end development, I'm here to guide you every step of the way. Just make a reservation, and let's start this exciting journey together!</p>
+            <p>Thank you for watching, and I look forward to working with you soon!</p>
+        </div>
+        <button id="copyButton">Copy</button>
+    </div>
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const content = document.getElementById('presentationContent').innerText;
+            navigator.clipboard.writeText(content).then(function() {
+                alert('Presentation copied to clipboard!');
+            }, function(err) {
+                alert('Failed to copy text: ', err);
+            });
+        });
+    </script>
+</body>
+</html>
