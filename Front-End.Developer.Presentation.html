@@ -3,42 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front-End Developer Presentation</title>
+    <title>Paragraph Player</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            margin: 20px;
         }
-
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            text-align: center;
-            overflow-y: auto;
-            height: 90vh;
-        }
-
-        h1 {
+        .paragraph {
             margin-bottom: 20px;
         }
-
-        .content {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
         button {
             margin-top: 10px;
-            padding: 10px 20px;
+            padding: 10px 15px;
             font-size: 16px;
             cursor: pointer;
             background-color: #007bff;
@@ -46,78 +22,62 @@
             border: none;
             border-radius: 5px;
         }
-
         button:hover {
             background-color: #0056b3;
-        }
-
-        .language-section {
-            margin-bottom: 30px;
-        }
-
-        .language-section h2 {
-            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Front-End Developer Presentation</h1>
 
-        <div class="language-section" id="englishSection">
-            <h2>English</h2>
-            <div class="content" id="presentationContentEnglish">
-                <p>Hi everyone! My name is [Your Name], and I'm excited to share my passion for front-end development with you.</p>
-                <p>I am a certified front-end developer with credentials from Meta, IBM, and Google. With these prestigious certifications, I have gained extensive knowledge and expertise in the field.</p>
-                <p>Over the past two years, I have been teaching HTML, CSS, and Bootstrap. My teaching journey has allowed me to help many students master the art of web development and create stunning websites.</p>
-                <p>One of my proudest achievements is the development of an innovative system for teaching and practicing programming. This system is designed to make learning interactive, engaging, and efficient, ensuring that you can quickly apply what you learn to real-world projects.</p>
-                <p>Feel free to check out my GitHub profile to see some of the projects and systems I've worked on. This will give you a glimpse of my skills and the kind of work I can help you achieve.</p>
-                <p>If you're eager to learn how to create amazing websites and want to dive into the world of front-end development, I'm here to guide you every step of the way. Just make a reservation, and let's start this exciting journey together!</p>
-                <p>Thank you for watching, and I look forward to working with you soon!</p>
-            </div>
-            <button onclick="copyToClipboard('presentationContentEnglish')">Copy</button>
-        </div>
+<div class="paragraph">
+    <p>Hi everyone! My name is Samer, and I'm excited to share my passion for front-end development with you.</p>
+    <button onclick="speakText('Hi everyone! My name is Samer, and I\'m excited to share my passion for front-end development with you.')">Play</button>
+</div>
 
-        <div class="language-section" id="arabicSection">
-            <h2>Arabic</h2>
-            <div class="content" id="presentationContentArabic">
-                <p>مرحبًا ! اسمي سامر وأنا متحمس لمشاركة شغفي بتطوير الواجهة الأمامية معكم.</p>
-                <p>أنا مطور واجهات أمامية معتمد بشهادات من 
-                    <br>Meta وIBM وGoogle.  <br>
-                     من خلال هذه الشهادات المرموقة، اكتسبت معرفة واسعة وخبرة في هذا المجال.</p>
-                <p>على مدار العامين الماضيين، كنت أقوم بتدريس <br>HTML وCSS وBootstrap.<br> سمحت لي رحلتي التعليمية بمساعدة العديد من الطلاب على إتقان فن تطوير الويب وإنشاء مواقع ويب رائعة.</p>
-                <p>أحد أعظم إنجازاتي هو تطوير نظام مبتكر لتعليم وممارسة البرمجة. تم تصميم هذا النظام لجعل التعلم تفاعليًا وجذابًا وفعالًا، مما يضمن لك تطبيق ما تتعلمه بسرعة على المشاريع الواقعية.</p>
-                <p>لا تتردد في الاطلاع على ملفي الشخصي على <br>GitHub <br>لرؤية بعض المشاريع والأنظمة التي عملت عليها. سيمنحك هذا لمحة عن مهاراتي ونوع العمل الذي يمكنني مساعدتك في تحقيقه.</p>
-                <p>إذا كنت متحمسًا لتعلم كيفية إنشاء مواقع ويب مذهلة وترغب في الغوص في عالم تطوير الواجهة الأمامية، فأنا هنا لإرشادك في كل خطوة على الطريق. فقط احجز موعدًا، ودعونا نبدأ هذه الرحلة المثيرة معًا!</p>
-                <p>شكرًا للمشاهدة، وأتطلع للعمل معكم قريبًا!</p>
-            </div>
-            <button onclick="copyToClipboard('presentationContentArabic')">Copy</button>
-        </div>
+<div class="paragraph">
+    <p>I am a certified front-end developer with credentials from Meta, IBM, and Google. With these prestigious certifications, I have gained extensive knowledge and expertise in the field.</p>
+    <button onclick="speakText('I am a certified front-end developer with credentials from Meta, IBM, and Google. With these prestigious certifications, I have gained extensive knowledge and expertise in the field.')">Play</button>
+</div>
 
-        <div class="language-section" id="spanishSection">
-            <h2>Spanish</h2>
-            <div class="content" id="presentationContentSpanish">
-                <p>¡Hola a todos! Mi nombre es [Tu Nombre] y estoy emocionado de compartir mi pasión por el desarrollo front-end con ustedes.</p>
-                <p>Soy un desarrollador front-end certificado con credenciales de Meta, IBM y Google. Con estas prestigiosas certificaciones, he adquirido un amplio conocimiento y experiencia en el campo.</p>
-                <p>Durante los últimos dos años, he estado enseñando HTML, CSS y Bootstrap. Mi viaje como profesor me ha permitido ayudar a muchos estudiantes a dominar el arte del desarrollo web y crear sitios web impresionantes.</p>
-                <p>Uno de mis mayores logros es el desarrollo de un sistema innovador para la enseñanza y práctica de la programación. Este sistema está diseñado para hacer que el aprendizaje sea interactivo, atractivo y eficiente, asegurando que puedas aplicar rápidamente lo que aprendes a proyectos del mundo real.</p>
-                <p>No dudes en revisar mi perfil de GitHub para ver algunos de los proyectos y sistemas en los que he trabajado. Esto te dará una idea de mis habilidades y el tipo de trabajo que puedo ayudarte a lograr.</p>
-                <p>Si tienes ganas de aprender cómo crear sitios web increíbles y quieres sumergirte en el mundo del desarrollo front-end, estoy aquí para guiarte en cada paso del camino. Solo haz una reserva, ¡y comencemos este emocionante viaje juntos!</p>
-                <p>¡Gracias por ver el video, y espero trabajar contigo pronto!</p>
-            </div>
-            <button onclick="copyToClipboard('presentationContentSpanish')">Copy</button>
-        </div>
-    </div>
+<div class="paragraph">
+    <p>Over the past two years, I have been teaching HTML, CSS, and Bootstrap. My teaching journey has allowed me to help many students master the art of web development and create stunning websites.</p>
+    <button onclick="speakText('Over the past two years, I have been teaching HTML, CSS, and Bootstrap. My teaching journey has allowed me to help many students master the art of web development and create stunning websites.')">Play</button>
+</div>
 
-    <script>
-        function copyToClipboard(elementId) {
-            const content = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(content).then(function() {
-                alert('Presentation copied to clipboard!');
-            }, function(err) {
-                alert('Failed to copy text: ', err);
-            });
-        }
-    </script>
+<div class="paragraph">
+    <p>One of my proudest achievements is the development of an innovative system for teaching and practicing programming. This system is designed to make learning interactive, engaging, and efficient, ensuring that you can quickly apply what you learn to real-world projects.</p>
+    <button onclick="speakText('One of my proudest achievements is the development of an innovative system for teaching and practicing programming. This system is designed to make learning interactive, engaging, and efficient, ensuring that you can quickly apply what you learn to real-world projects.')">Play</button>
+</div>
+
+<div class="paragraph">
+    <p>Feel free to check out my GitHub profile to see some of the projects and systems I've worked on. This will give you a glimpse of my skills and the kind of work I can help you achieve.</p>
+    <button onclick="speakText('Feel free to check out my GitHub profile to see some of the projects and systems I\'ve worked on. This will give you a glimpse of my skills and the kind of work I can help you achieve.')">Play</button>
+</div>
+
+<div class="paragraph">
+    <p>If you're eager to learn how to create amazing websites and want to dive into the world of front-end development, I'm here to guide you every step of the way. Just make a reservation, and let's start this exciting journey together!</p>
+    <button onclick="speakText('If you\'re eager to learn how to create amazing websites and want to dive into the world of front-end development, I\'m here to guide you every step of the way. Just make a reservation, and let\'s start this exciting journey together!')">Play</button>
+</div>
+
+<div class="paragraph">
+    <p>Thank you for watching, and I look forward to working with you soon!</p>
+    <button onclick="speakText('Thank you for watching, and I look forward to working with you soon!')">Play</button>
+</div><div class="paragraph">
+    <p>Thank you for watching, and I look forward to working with you soon!</p>
+    <button onclick="speakText('Thank you for watching, and I look forward to working with you soon!')">Play</button>
+</div>
+
+
+<script>
+    function speakText(text) {
+        const speech = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(speech);
+    }
+</script>
+
+
+
+
+
 </body>
 </html>
